@@ -24,7 +24,7 @@ jobs:
           giphy-api-key: ${{ secrets.GIPHY_API_KEY }}
 
       - name: Invoke Giphy PR Comment Javascript Action
-        uses: snehakarale/js-custom-action-pr@1.0.1-alpha
+        uses: snehakarale/js-custom-action-pr@1.0.2-alpha
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           giphy-api-key: ${{ secrets.GIPHY_API_KEY }}
