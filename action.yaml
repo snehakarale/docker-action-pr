@@ -1,0 +1,15 @@
+name: 'Giphy PR Comment'
+description: 'Automatically add a thank-you Giphy GIF to pull requests'
+inputs: #inputs come from secrets
+  github-token:
+    description: 'Token for GitHub API authentication'
+    required: true
+  giphy-api-key:
+    description: 'Secret key for Giphy API'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.github-token }}
+    - ${{ inputs.giphy-api-key }}
